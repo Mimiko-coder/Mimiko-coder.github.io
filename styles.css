@@ -652,24 +652,39 @@ body:hover .cursor-glow {
   background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1f 50%, #1a1a2a 100%);
 }
 
+.project-visual-chatbot {
+  background: linear-gradient(135deg, #1a1a2e 0%, #1f1528 50%, #1a1a2a 100%);
+}
+
+.project-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.06);
+}
+
 .project-visual::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 70%, var(--accent-glow) 0%, transparent 60%);
-  opacity: 0.5;
-}
-
-.project-icon {
-  font-size: 5rem;
-  position: relative;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 15, 0.75) 100%);
+  opacity: 0.9;
   z-index: 1;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.project-card:hover .project-icon {
-  transform: scale(1.1) rotate(-5deg);
+.project-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, var(--accent-glow) 0%, transparent 60%);
+  opacity: 0.35;
+  z-index: 1;
 }
 
 .project-content {
@@ -808,9 +823,25 @@ body:hover .cursor-glow {
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
-.timeline-marker-community {
+.timeline-marker-dev {
   background: var(--teal);
-  box-shadow: 0 0 20px var(--teal-glow);
+  box-shadow: 0 0 24px var(--teal-glow);
+  width: 14px;
+  height: 14px;
+}
+
+.timeline-marker-community {
+  background: var(--rose);
+  box-shadow: 0 0 20px var(--rose-glow);
+}
+
+.timeline-content-featured {
+  border-color: rgba(94, 196, 182, 0.25);
+  background: rgba(26, 30, 38, 0.75);
+}
+
+.timeline-content-featured:hover {
+  border-color: rgba(94, 196, 182, 0.45);
 }
 
 .timeline-content {
