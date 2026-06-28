@@ -733,7 +733,7 @@ strong { color: var(--text); font-weight: 600; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
@@ -816,7 +816,7 @@ strong { color: var(--text); font-weight: 600; }
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .edu-grid {
@@ -861,4 +861,6 @@ strong { color: var(--text); font-weight: 600; }
   .why-grid { grid-template-columns: 1fr; }
 
   .project-features { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
 }
