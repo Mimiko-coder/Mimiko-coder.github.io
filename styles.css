@@ -107,10 +107,16 @@ strong { color: var(--text); font-weight: 600; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--nav-h) + 2rem) 1.5rem 0;
+  padding: calc(var(--nav-h) + 2rem) 1.5rem 7rem;
   background: linear-gradient(160deg, #0a1628 0%, #0d2137 40%, #0a1a30 100%);
   overflow: hidden;
   text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 1.5rem;
 }
 
 .hero-bg-icons {
@@ -209,8 +215,13 @@ strong { color: var(--text); font-weight: 600; }
 }
 
 .hero-role {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  font-size: 0.95rem;
+  color: var(--cyan-light);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 3;
 }
 
 .hero-wave {
@@ -219,6 +230,8 @@ strong { color: var(--text); font-weight: 600; }
   left: 0;
   right: 0;
   line-height: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-wave svg {

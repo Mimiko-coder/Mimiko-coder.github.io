@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
+  document.querySelectorAll('#home .reveal').forEach(el => {
+    el.classList.add('visible');
+  });
+
   const sectionObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
