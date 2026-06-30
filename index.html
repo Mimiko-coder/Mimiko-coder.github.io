@@ -7,7 +7,7 @@
   <title>Mercy Sithole | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,32 +26,65 @@
   </nav>
 
   <header class="hero" id="home">
-    <div class="hero-bg-icons" aria-hidden="true">
-      <svg class="bg-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      <svg class="bg-icon" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-      <svg class="bg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-    </div>
-    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
 
-    <div class="hero-content">
-      <p class="hero-sub reveal">Explore my creative design</p>
-      <h1 class="hero-title reveal">Portfolio</h1>
-      <div class="hero-photo-wrap reveal">
-        <div class="hero-photo-ring"></div>
-        <img src="images/mercy-profile.png" alt="Mercy Sithole" class="hero-photo" />
+    <div class="hero-layout">
+      <div class="hero-text reveal">
+        <span class="hero-badge">✦ Software Engineering Graduate</span>
+        <p class="hero-sub">Explore my creative design</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">My</span>
+          <span class="hero-title-accent">Portfolio</span>
+        </h1>
+        <p class="hero-name">Mercy Sithole</p>
+        <p class="hero-role">Full-Stack Developer · Mobile & Web · AI Systems</p>
+        <p class="hero-tagline">Building bold digital solutions that connect people, simplify work, and create real impact.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Let's Connect</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="stat-num">5+</span><span class="stat-label">Projects</span></div>
+          <div class="hero-stat"><span class="stat-num">Full</span><span class="stat-label">Stack Dev</span></div>
+          <div class="hero-stat"><span class="stat-num">2026</span><span class="stat-label">Graduate</span></div>
+        </div>
       </div>
-      <p class="hero-name reveal">Mercy Sithole</p>
-      <p class="hero-role reveal">Software Engineering Graduate · Full-Stack Developer</p>
+
+      <div class="hero-visual reveal">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-glow"></div>
+          <div class="hero-photo-ring"></div>
+          <img src="images/mercy-profile.png" alt="Mercy Sithole" class="hero-photo" />
+          <div class="hero-float hero-float-1">Flutter</div>
+          <div class="hero-float hero-float-2">React</div>
+          <div class="hero-float hero-float-3">Python</div>
+          <div class="hero-float hero-float-4">AI</div>
+        </div>
+      </div>
     </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
 
     <div class="hero-wave" aria-hidden="true">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,70 L1440,120 L0,120 Z" fill="url(#waveGrad)"/>
+        <path d="M0,80 C240,20 480,100 720,50 C960,0 1200,90 1440,40 L1440,120 L0,120 Z" fill="url(#waveGrad)"/>
+        <path d="M0,90 C300,40 600,110 900,60 C1100,30 1300,80 1440,55 L1440,120 L0,120 Z" fill="url(#waveGrad2)" opacity="0.5"/>
         <defs>
           <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#00b4d8" stop-opacity="0.6"/>
-            <stop offset="50%" stop-color="#48cae4" stop-opacity="0.8"/>
+            <stop offset="0%" stop-color="#00b4d8" stop-opacity="0.7"/>
+            <stop offset="50%" stop-color="#48cae4" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#7b2ff7" stop-opacity="0.5"/>
+          </linearGradient>
+          <linearGradient id="waveGrad2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#48cae4" stop-opacity="0.4"/>
             <stop offset="100%" stop-color="#00b4d8" stop-opacity="0.6"/>
           </linearGradient>
         </defs>
