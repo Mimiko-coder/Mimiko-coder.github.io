@@ -84,7 +84,10 @@ function initParticles() {
   }
 
   function createParticles() {
-    const count = Math.min(80, Math.floor(w * h / 12000));
+    const isMobile = w < 768;
+    const count = isMobile
+      ? Math.min(35, Math.floor(w * h / 20000))
+      : Math.min(80, Math.floor(w * h / 12000));
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * w,
       y: Math.random() * h,
